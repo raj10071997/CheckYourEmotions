@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_display_result"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.game.dhanraj.emotionapi.DisplayResultActivity">
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Recognizing emotions with auto-detected face rectangle"
+            android:textSize="15dp"
+            android:layout_marginLeft="20dp"
+            android:typeface="serif"
+            android:textStyle="italic"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/heading"
+            android:layout_marginTop="20dp"
+
+            />
+
+
+    <ImageView
+        android:layout_below="@+id/heading"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:id="@+id/imageview"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageview"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:text="process"
+        android:id="@+id/processbtn"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageview"
+        android:layout_alignParentRight="true"
+        android:visibility="invisible"
+        android:layout_marginTop="15dp"
+        android:text="next"
+        android:id="@+id/nextbtn"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Anger :"
+        android:textSize="20dp"
+        android:textStyle="bold|italic"
+        android:layout_below="@+id/processbtn"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:id="@+id/anger"
+        />
+
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="Happiness :"
+           android:textSize="20dp"
+           android:textStyle="bold|italic"
+           android:layout_below="@+id/anger"
+           android:layout_marginLeft="20dp"
+           android:layout_marginTop="10dp"
+           android:id="@+id/happiness"
+           />
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="Sadness :"
+           android:textSize="20dp"
+           android:textStyle="bold|italic"
+           android:layout_below="@+id/happiness"
+           android:layout_marginLeft="20dp"
+           android:layout_marginTop="10dp"
+           android:id="@+id/sadness"
+           />
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="Contempt :"
+           android:textSize="20dp"
+           android:textStyle="bold|italic"
+           android:layout_below="@+id/sadness"
+           android:layout_marginLeft="20dp"
+           android:layout_marginTop="10dp"
+           android:id="@+id/contempt"
+           />
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="Fear :"
+           android:textSize="20dp"
+           android:textStyle="bold|italic"
+           android:layout_below="@+id/contempt"
+           android:layout_marginLeft="20dp"
+           android:layout_marginTop="10dp"
+           android:id="@+id/fear"
+           />
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="Disgust :"
+           android:textSize="20dp"
+           android:textStyle="bold|italic"
+           android:layout_below="@+id/fear"
+           android:layout_marginLeft="20dp"
+           android:layout_marginTop="10dp"
+           android:id="@+id/disgust"
+           />
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="Neutral :"
+           android:textSize="20dp"
+           android:textStyle="bold|italic"
+           android:layout_below="@+id/disgust"
+           android:layout_marginLeft="20dp"
+           android:layout_marginTop="10dp"
+           android:id="@+id/neutral"
+           />
+
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="Surpirse :"
+           android:textSize="20dp"
+           android:textStyle="bold|italic"
+           android:layout_below="@+id/neutral"
+           android:layout_marginLeft="20dp"
+           android:layout_marginTop="10dp"
+           android:id="@+id/surprise"
+           />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Major Depicted Emotion :"
+            android:id="@+id/majoremotion"
+            android:textStyle="bold|italic"
+            android:textSize="25dp"
+            android:layout_below="@+id/surprise"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"/>
+
+
+    </RelativeLayout>
+</ScrollView>
+
+
+</RelativeLayout>

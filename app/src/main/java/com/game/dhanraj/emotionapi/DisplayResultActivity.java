@@ -29,7 +29,7 @@ import java.util.List;
 
 public class DisplayResultActivity extends AppCompatActivity {
 
-    public EmotionServiceClient emotionServiceClient = new EmotionServiceRestClient("fb771b3cda724259b6a0b208a0a2c191");
+    public EmotionServiceClient emotionServiceClient = new EmotionServiceRestClient("subscription key");
     private ImageView imageView ;
     private Button process,next;
     private String result="neutral";

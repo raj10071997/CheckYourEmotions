@@ -23,7 +23,7 @@ import java.io.IOException;
 
 public class MainActivity extends AppCompatActivity {
 
-    public EmotionServiceClient emotionServiceClient = new EmotionServiceRestClient("fb771b3cda724259b6a0b208a0a2c191");
+    public EmotionServiceClient emotionServiceClient = new EmotionServiceRestClient("Subscription key");
     public static final int GET_FROM_GALLERY = 3;
     public static final int TAKE_A_PHOTO=1;
     private Button getfromthegallery,takeaphoto;

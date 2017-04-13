@@ -176,37 +176,31 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
+         super.onActivityResult(requestCode, resultCode, data);
         Bitmap b=null;
         Intent n = new Intent(MainActivity.this,DisplayResultActivity.class);
-        if (requestCode == 5) {
+        if (requestCode == 5 && requestCode!=GET_FROM_GALLERY1) {
             if (resultCode == Activity.RESULT_OK ) {
 
                  b = data.getParcelableExtra("data");
                 n.putExtra("imageformcamera",b);
+               n.putExtra("Dhanraj","rar");
                 startActivity(n);
             }
         }
 
-        else if(requestCode == GET_FROM_GALLERY && data != null && data.getData() != null && resultCode == Activity.RESULT_OK)
-            {
+        if(requestCode == GET_FROM_GALLERY1 && requestCode!=5  && data != null && data.getData() != null)
+        {
                 Uri selectedimage=data.getData();
-                try{
-                    b=android.provider.MediaStore.Images.Media.getBitmap(this.getContentResolver(),selectedimage);
-                   // detectAndFrame(b);
-                } catch (FileNotFoundException e) {
-                    e.printStackTrace();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
 
-                n.putExtra("imageformcamera",b);
-                startActivity(n);
-
+                    n.putExtra("imageformcamera",selectedimage.toString());
+                    n.putExtra("Dhanraj","ramram");
+                    startActivity(n);
         }
-
-
-
     }
+
+
+
+    
 
 }

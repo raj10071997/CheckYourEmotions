@@ -54,14 +54,33 @@ public class DisplayResultActivity extends AppCompatActivity {
         neutral = (TextView) findViewById(R.id.neutral);
         majoremotion = (TextView) findViewById(R.id.majoremotion);
 
-        b = getIntent().getParcelableExtra("imageformcamera");
+         Bundle extras = getIntent().getExtras();
+        if(extras!=null)
+        {
+            String name = extras.getString("Dhanraj");
 
-        imageView.setImageBitmap(b);
+            if(name.equals("rar"))
+            {
+                b=extras.getParcelable("imageformcamera");
+            }
+           if(name.equals("ramram"))
+           {
+              Uri imageUri = Uri.parse(extras.getString("imageformcamera"));
+            try {
+                b= MediaStore.Images.Media.getBitmap(this.getContentResolver(),imageUri);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+           }
+
+        }
 
         ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
         b.compress(Bitmap.CompressFormat.JPEG,100,outputStream);
         final ByteArrayInputStream inputStream = new ByteArrayInputStream(outputStream.toByteArray());
-
+        
+         imageView.setImageBitmap(b);
+        
         process.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
